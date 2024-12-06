@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "slotmachine/proto";  // Ensure there's no space
+
+message ModeUsageRequest {
+    string area_code = 1;
+}
+
+message ModeUsageResponse {
+    repeated ModeInfo modes = 1;
+}
+
+message ModeInfo {
+    string mode = 1;
+    int32 usage = 2;
+}
